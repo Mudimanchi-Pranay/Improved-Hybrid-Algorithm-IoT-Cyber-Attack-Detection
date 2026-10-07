@@ -191,26 +191,46 @@ Available operations include:
 - Comparison Table
 
 🔬 Project Execution Screenshots
-Dataset Loaded
-The application displays the selected dataset and sample dataset records.
 
-Dataset Preprocessing
-The dataset is normalized before being passed to the machine learning and deep learning models.
+1. Project Interface
+The main desktop interface provides access to all major stages of the IoT cyber-attack detection workflow.
 
-Autoencoder Results
-The Autoencoder performance metrics are displayed through the application.
+![Project Interface](screenshots/01-project-interface.png)
 
-Decision Tree with PCA
-The extracted features are reduced using PCA and classified using a Decision Tree.
+2. Dataset Loaded
+The application loads the IoT dataset and displays sample records.
 
-CNN-LSTM Results
-The CNN-LSTM model is evaluated for attack detection.
+![Dataset Loaded](screenshots/02-dataset-loaded.png)
 
-Model Comparison
-The application provides a comparison of the evaluated models.
+3. Dataset Preprocessing
+The dataset is processed and normalized before model training.
 
-Attack Detection
-The application provides an interface for detecting attack types from IoT data.
+![Dataset Preprocessing](screenshots/03-dataset-preprocessing.png)
+
+4. Autoencoder Results
+The Autoencoder performance metrics are displayed after feature extraction.
+
+![Autoencoder Results](screenshots/04-autoencoder-results.png)
+
+5. Decision Tree with PCA
+The Decision Tree classification results using PCA-reduced features are displayed.
+
+![Decision Tree PCA Results](screenshots/05-decision-tree-pca-results.png)
+
+6. CNN-LSTM Results
+The CNN-LSTM model performance results are displayed for cyber-attack detection.
+
+![CNN-LSTM Results](screenshots/06-cnn-lstm-results.png)
+
+7. Model Performance Comparison
+The performance of the evaluated models is compared using Accuracy, F1 Score, Precision, and Recall.
+
+![Model Performance Comparison](screenshots/07-model-performance-comparison.png)
+
+8. Attack Detection
+The application provides attack-type detection based on the processed IoT data.
+
+![Attack Detection](screenshots/08-attack-detection.png)
 
 🛠️ Technologies Used
 Programming Language
@@ -375,23 +395,3 @@ The datasets and experiments should be used only in controlled and authorized en
 Pranay Kumar
 Cybersecurity | SOC Analyst | Security Operations
 GitHub: Mudimanchi-Pranay
-
-⭐ Project Summary
-Improved Hybrid Algorithm for IoT Cyber Attack Detection combines Autoencoder-based feature extraction, PCA, Decision Tree classification, and CNN-LSTM based detection to analyze IoT traffic and identify different categories of cyber attacks.
-IoT Data
-   ↓
-Preprocessing
-   ↓
-Autoencoder
-   ↓
-Feature Extraction
-   ↓
-PCA + Decision Tree
-   ↓
-CNN-LSTM
-   ↓
-Attack Detection
-   ↓
-Performance Evaluation
-
-Built as a practical final-year project for IoT cybersecurity and automated cyber-attack detection.
