@@ -199,70 +199,40 @@ Available operations include:
 - Comparison Table
 
 ---
-
 ## 📸 Project Screenshots
 
-### 1. Project Interface
-
-The main application interface provides access to the complete IoT cyber-attack detection workflow.
+### 🖥️ Project Interface
 
 ![Project Interface](screenshots/01-project-interface.png)
 
----
-
-### 2. Dataset Loaded
-
-The application loads the IoT dataset and displays the available network traffic records.
+### 📂 Dataset Loaded
 
 ![Dataset Loaded](screenshots/02-dataset-loaded.png)
 
----
-
-### 3. Dataset Preprocessing
-
-The dataset is preprocessed and normalized before the machine-learning and deep-learning stages.
+### ⚙️ Dataset Preprocessing
 
 ![Dataset Preprocessing](screenshots/03-dataset-preprocessing.png)
 
----
-
-### 4. Autoencoder Results
-
-The Autoencoder extracts important representations from the IoT network traffic.
+### 🧠 Autoencoder Results
 
 ![Autoencoder Results](screenshots/04-autoencoder-results.png)
 
----
+### 🌳 Decision Tree + PCA
 
-### 5. Decision Tree with PCA
+![Decision Tree + PCA](screenshots/05-decision-tree-pca-results.png)
 
-PCA is applied to reduce the feature dimensionality before classification using the Decision Tree model.
-
-![Decision Tree PCA Results](screenshots/05-decision-tree-pca-results.png)
-
----
-
-### 6. CNN-LSTM Results
-
-The CNN-LSTM model is used for deep-learning based cyber-attack detection.
+### 🔥 CNN-LSTM Results
 
 ![CNN-LSTM Results](screenshots/06-cnn-lstm-results.png)
 
----
-
-### 7. Model Performance Comparison
-
-The performance of the implemented models is compared using classification metrics.
+### 📊 Model Performance Comparison
 
 ![Model Performance Comparison](screenshots/07-model-performance-comparison.png)
 
----
-
-### 8. Attack Detection
-
-The application identifies the detected attack category from the processed IoT traffic.
+### 🚨 Attack Detection
 
 ![Attack Detection](screenshots/08-attack-detection.png)
+
 
 🔬 Project Execution Screenshots
 1. Project Interface
