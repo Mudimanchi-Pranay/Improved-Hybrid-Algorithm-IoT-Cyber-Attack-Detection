@@ -1,294 +1,244 @@
 # 🛡️ Improved Hybrid Algorithm for IoT Cyber Attack Detection
 
-An improved hybrid machine learning and deep learning approach for detecting and classifying cyber attacks in IoT environments.
+An improved hybrid deep-learning based intrusion detection system designed to detect and classify cyber attacks in IoT environments.
 
-The project provides a desktop-based application for loading IoT network datasets, preprocessing data, extracting important features, training detection models, identifying attack types, and comparing model performance.
+The project combines **CNN + LSTM**, preprocessing, dimensionality reduction, anomaly detection, and traditional machine-learning models to analyze network traffic and identify malicious activity.
 
+---
 
 ## 📌 Project Overview
 
-The increasing number of IoT devices has created a larger attack surface for cyber threats. IoT networks can be targeted by different types of attacks, including malicious response injection, command injection, malicious function code injection, and Denial-of-Service attacks.
+The rapid growth of Internet of Things (IoT) devices has increased the attack surface of modern networks.
 
-This project implements a hybrid cyber-attack detection approach that combines:
+Traditional intrusion detection systems may struggle to identify complex and evolving attacks because IoT traffic contains large volumes of high-dimensional and imbalanced data.
 
-- Data preprocessing and normalization
-- Autoencoder-based feature extraction
+This project proposes an **improved hybrid intrusion detection framework** that combines:
+
+- Convolutional Neural Networks (CNN)
+- Long Short-Term Memory (LSTM)
 - Principal Component Analysis (PCA)
-- Decision Tree classification
-- CNN-LSTM based attack detection
-- Attack-type identification
-- Performance comparison using classification metrics
+- Autoencoders
+- Decision Tree
+- Random Forest
+- Support Vector Machine (SVM)
+- Deep Neural Network techniques
 
-The project is implemented as a Python desktop application using a Tkinter-based graphical user interface.
+The system processes network traffic, extracts important features, detects anomalies, and classifies cyber attacks.
 
 ---
 
 ## 🎯 Objectives
 
-The main objectives of the project are:
-
-- Detect cyber attacks in IoT environments
-- Preprocess and normalize IoT network traffic data
-- Extract important features using an Autoencoder
-- Reduce feature dimensionality using PCA
-- Classify attack categories using machine learning
-- Apply CNN-LSTM based deep learning for attack detection
-- Compare the performance of different detection approaches
-- Provide a simple graphical interface for performing the detection process
+- Detect malicious activity in IoT network traffic.
+- Reduce the dimensionality of large network datasets.
+- Detect anomalous traffic using Autoencoders.
+- Capture spatial patterns using CNN.
+- Capture temporal patterns using LSTM.
+- Compare the hybrid model with traditional machine-learning approaches.
+- Improve the reliability of IoT cyber-attack detection.
+- Provide an interactive interface for running the detection pipeline.
 
 ---
 
-## 🏗️ System Workflow
+## 🧠 Proposed Architecture
 
 ```text
-                    IoT Dataset
-                         │
-                         ▼
-                ┌─────────────────┐
-                │ Dataset Loading │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │ Preprocessing   │
-                │ & Normalization │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │   Autoencoder   │
-                │ Feature         │
-                │ Extraction      │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │       PCA       │
-                │ Dimensionality  │
-                │ Reduction       │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │ Decision Tree   │
-                │ Classification  │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │   CNN-LSTM      │
-                │ Attack Detection│
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │ Attack Type     │
-                │ Detection       │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌──────────────────┐
-                │ Model Performance│
-                │ Comparison       │
-                └──────────────────┘
+                    IoT Network Traffic
+                            │
+                            ▼
+                    Dataset Collection
+                            │
+                            ▼
+                    Data Preprocessing
+                            │
+                            ▼
+                  Feature Engineering
+                            │
+                            ▼
+                         PCA
+                            │
+              ┌─────────────┴─────────────┐
+              │                           │
+              ▼                           ▼
+        Autoencoder                 ML Baselines
+       Anomaly Detection       Decision Tree / RF / SVM
+              │
+              ▼
+         CNN Feature
+          Extraction
+              │
+              ▼
+        LSTM Temporal
+          Learning
+              │
+              ▼
+       Hybrid CNN + LSTM
+              │
+              ▼
+       Attack Classification
+              │
+              ▼
+        Detection Results
 
-🧠 Detection Approach
-1. Dataset Loading
-The application allows the user to select an IoT dataset through the graphical interface.
-The project includes:
-Dataset/
-├── iot_dataset.csv
-└── testData.csv
-
-The dataset contains IoT traffic records and attack classifications.
-
-2. Data Preprocessing
-Before model training, the dataset is processed by:
-- Handling missing values
-- Separating input features and labels
-- Shuffling records
-- Applying Min-Max normalization
-- Converting class labels into categorical representation
-- Splitting the data into training and testing sets
-The application also stores the scaler used during preprocessing.
-
-3. Autoencoder
-An Autoencoder is used to learn a representation of the input data and extract important features.
-The implementation uses a neural network architecture with an encoding layer and decoding layer.
-The extracted representation is subsequently used for further classification.
-
-4. PCA
-Principal Component Analysis (PCA) is applied to the extracted features to reduce dimensionality.
-The reduced feature representation is then used by the Decision Tree classifier.
-
-5. Decision Tree
-A Decision Tree classifier is trained using the features extracted from the Autoencoder and reduced using PCA.
-The Decision Tree is used to classify the IoT traffic and support attack-type prediction.
-
-6. CNN-LSTM
-The project also implements an LSTM-based deep learning model for attack detection.
-The extracted feature representation is reshaped into a sequential format and processed using an LSTM network.
-The model contains:
-- LSTM layer
-- Dropout layer
-- Dense layer
-- Output layer with softmax activation
-The trained model can be stored and reused from the model/ directory.
-
-🚨 Attack Categories
-The project works with the following attack categories:
-Category	Description
-Normal	Normal IoT network activity
-NMRI	Naive Malicious Response Injection
-Malicious	Malicious activity
-CMRI	Complex Malicious Response Injection
-MSCI	Malicious State Command Injection
-MPCI	Malicious Parameter Command Injection
-MFCI	Malicious Function Code Injection
-DoS	Denial-of-Service attack
-
-
-📊 Dataset Distribution
-The project dataset contains multiple categories of IoT traffic and cyber attacks.
-The application generates a visualization showing the distribution of different attack categories.
-
-📈 Model Performance
-The project evaluates the detection models using:
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-The implemented models include:
-- Autoencoder
-- Decision Tree with PCA
-- CNN-LSTM
-The recorded results from the project execution demonstrate that the CNN-LSTM approach achieved the strongest overall performance among the evaluated models.
-
-Performance Comparison
-
-📊 Example Results
-Autoencoder
-The project execution produced the following recorded results:
-- Accuracy: approximately 89.94%
-- Precision: approximately 73.46%
-- Recall: approximately 74.54%
-- F1 Score: approximately 73.94%
-Decision Tree with PCA
-The Decision Tree trained on the features extracted from the Autoencoder produced:
-- Accuracy: approximately 90.46%
-- Precision: approximately 73.30%
-- Recall: approximately 74.63%
-- F1 Score: approximately 73.92%
-CNN-LSTM
-The CNN-LSTM implementation produced the strongest recorded performance among the evaluated approaches.
-
-## 🖥️ Application Interface
-
-The project provides a graphical interface through which the user can perform the major stages of the IoT cyber-attack detection workflow.
-
-Available operations include:
-
-- Upload IoT Dataset
-- Preprocess Dataset
-- Run AutoEncoder Algorithm
-- Run Decision Tree with PCA
-- Run CNN-LSTM Algorithm
-- Detection of Attack Type
-- Comparison Graph
-- Comparison Table
-
-📸 Project Screenshots
-🖥️ Project Interface
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/01-project-interface.png" alt="Project Interface" width="900">
-
-📂 Dataset Loaded
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/02-dataset-loaded.png" alt="Dataset Loaded" width="900">
-
-⚙️ Dataset Preprocessing
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/03-dataset-preprocessing.png" alt="Dataset Preprocessing" width="900">
-
-🧠 Autoencoder Results
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/04-autoencoder-results.png" alt="Autoencoder Results" width="900">
-
-🌲 Decision Tree + PCA
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/05-decision-tree-pca-results.png" alt="Decision Tree PCA Results" width="900">
-
-🔥 CNN-LSTM Results
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/06-cnn-lstm-results.png" alt="CNN-LSTM Results" width="900">
-
-📊 Model Performance Comparison
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/07-model-performance-comparison.png" alt="Model Performance Comparison" width="900">
-
-🚨 Attack Detection
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/08-attack-detection.png" alt="Attack Detection" width="900">
-
-🔬 Project Execution Screenshots
-1. Project Interface
-The main desktop interface provides access to all major stages of the IoT cyber-attack detection workflow.
-
-2. Dataset Loaded
-The application loads the IoT dataset and displays sample records.
-
-3. Dataset Preprocessing
-The dataset is processed and normalized before model training.
-
-4. Autoencoder Results
-The Autoencoder performance metrics are displayed after feature extraction.
-
-5. Decision Tree with PCA
-The Decision Tree classification results using PCA-reduced features are displayed.
-
-6. CNN-LSTM Results
-The CNN-LSTM model performance results are displayed for cyber-attack detection.
-
-7. Model Performance Comparison
-The performance of the evaluated models is compared using Accuracy, F1 Score, Precision, and Recall.
-
-8. Attack Detection
-The application provides attack-type detection based on the processed IoT data.
-
-🛠️ Technologies Used
-Programming Language
+🔬 Dataset
+The project works with network intrusion-detection datasets containing benign and malicious network traffic.
+The implementation includes support for datasets such as:
+- CIC-IDS2017
+- UNSW-NB15
+- IoT network traffic datasets
+Dataset Processing
+The preprocessing pipeline includes:
+- Missing-value handling
+- Feature selection
+- Data cleaning
+- Encoding categorical features
+- Feature scaling
+- Dimensionality reduction
+- Train/test splitting
+- Class balancing where required
+⚙️ Technologies Used
+Programming
 - Python
 Machine Learning
 - Scikit-learn
 - Decision Tree
+- Random Forest
+- Support Vector Machine
 - PCA
-- Min-Max Scaling
-- K-Nearest Neighbors
 Deep Learning
-- TensorFlow
-- Keras
-- Autoencoder
+- TensorFlow / Keras
+- CNN
 - LSTM
-- Dense Neural Networks
-- Dropout
+- Autoencoder
 Data Processing
-- NumPy
 - Pandas
-Visualization
+- NumPy
 - Matplotlib
-User Interface
-- Tkinter
-Model Storage
-- Pickle
-- HDF5
-- JSON
+- Seaborn
+Security
+- Intrusion Detection
+- Network Traffic Analysis
+- Anomaly Detection
+- Cyber Attack Classification
+- IoT Security
+🔄 Detection Workflow
+Dataset
+   │
+   ▼
+Data Loading
+   │
+   ▼
+Preprocessing
+   │
+   ▼
+Feature Engineering
+   │
+   ▼
+PCA
+   │
+   ▼
+Autoencoder
+   │
+   ▼
+CNN
+   │
+   ▼
+LSTM
+   │
+   ▼
+Attack Classification
+   │
+   ▼
+Performance Evaluation
 
-📁 Repository Structure
+📸 Project Screenshots
+🖥️ Project Interface
+
+📂 Dataset Loaded
+
+⚙️ Dataset Preprocessing
+
+🧠 Autoencoder Results
+
+🌳 Decision Tree + PCA
+
+🔥 CNN-LSTM Results
+
+📊 Model Performance Comparison
+
+🚨 Attack Detection
+
+🤖 Models Implemented
+1. Decision Tree
+A Decision Tree classifier is used as one of the traditional machine-learning baselines.
+It provides an interpretable classification approach for detecting malicious network traffic.
+2. Random Forest
+Random Forest combines multiple decision trees to improve classification robustness and reduce overfitting.
+3. Support Vector Machine
+SVM is used as another traditional machine-learning baseline for separating malicious and benign traffic.
+4. PCA
+Principal Component Analysis is used for dimensionality reduction.
+It helps reduce the number of input features while retaining important information from the original dataset.
+5. Autoencoder
+The Autoencoder is used for anomaly detection.
+The model learns the representation of normal traffic and identifies unusual patterns based on reconstruction behavior.
+6. CNN
+The Convolutional Neural Network is used to extract important spatial and feature-level patterns from network traffic.
+7. LSTM
+The Long Short-Term Memory network is used to learn temporal relationships within network traffic sequences.
+8. Hybrid CNN + LSTM
+The proposed hybrid architecture combines:
+CNN
+ │
+ ├── Spatial / Feature Extraction
+ │
+ ▼
+LSTM
+ │
+ ├── Temporal Pattern Learning
+ │
+ ▼
+Attack Classification
+
+This allows the system to capture both feature-level and sequential characteristics of network traffic.
+📈 Model Evaluation
+The models can be evaluated using common classification metrics:
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Confusion Matrix
+- Detection Rate
+- False Positive Rate
+The performance comparison helps identify the effectiveness of the proposed hybrid CNN-LSTM approach against traditional machine-learning models.
+🛡️ Cyber Attacks
+The system is designed to identify malicious network behavior and attack categories represented in the selected dataset.
+Depending on the dataset, attack categories may include:
+- DoS
+- DDoS
+- Brute Force
+- Port Scanning
+- Web Attacks
+- Botnet Activity
+- Infiltration
+- Other Network-Based Attacks
+🖥️ Project Interface
+The project includes an interface that allows users to interact with the detection pipeline.
+The interface provides functionality for:
+- Dataset loading
+- Dataset preprocessing
+- Model execution
+- Attack detection
+- Result visualization
+- Model comparison
+📁 Project Structure
 Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/
 │
 ├── Dataset/
-│   ├── iot_dataset.csv
-│   └── testData.csv
+│   └── Dataset files
 │
 ├── model/
-│   ├── minmax.txt
-│   ├── lstm_history.pckl
-│   ├── lstm_weights.hdf5
-│   ├── encoder_history.pckl
-│   ├── encoder_model.json
-│   └── encoder_model_weights.h5
+│   └── Trained model files
 │
 ├── screenshots/
 │   ├── 01-project-interface.png
@@ -301,111 +251,90 @@ Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/
 │   └── 08-attack-detection.png
 │
 ├── Main.py
-├── test.py
-├── run.bat
-├── table.html
-├── requirements.txt
-├── .gitignore
-└── README.md
+├── README.md
+└── .gitignore
 
-⚙️ Main Components
-Main.py
-The primary application file containing:
-- Graphical user interface
-- Dataset loading
-- Preprocessing
-- Autoencoder implementation
-- Decision Tree classification
-- PCA processing
-- CNN-LSTM implementation
-- Attack-type detection
-- Performance evaluation
-- Visualization
+🚀 Installation
+Clone the repository:
+git clone https://github.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection.git
 
-Dataset/
-Contains the IoT datasets used by the project.
-model/
-Contains saved model architectures, weights, preprocessing objects, and training history.
-screenshots/
-Contains screenshots demonstrating the application workflow and results.
-requirements.txt
-Contains the Python packages required by the project.
-run.bat
-Windows batch file associated with launching the application.
+Navigate into the project:
+cd Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection
 
-🔄 End-to-End Detection Process
+Install the required Python packages:
+pip install -r requirements.txt
 
-The complete workflow can be summarized as:
-Load Dataset
-     ↓
-Preprocess Dataset
-     ↓
-Normalize Features
-     ↓
-Train / Load Autoencoder
-     ↓
-Extract Features
-     ↓
-Apply PCA
-     ↓
-Train Decision Tree
-     ↓
-Generate Attack Predictions
-     ↓
-CNN-LSTM Detection
-     ↓
-Calculate Metrics
-     ↓
-Compare Models
-     ↓
-Identify Attack Type
+If a requirements.txt file is not included, install the required libraries manually:
+pip install pandas numpy scikit-learn tensorflow matplotlib seaborn
 
-📌 Key Features
-- 🗂️ IoT dataset loading
-- 🔄 Dataset preprocessing
-- 📊 Feature normalization
-- 🧠 Autoencoder feature extraction
-- 📉 PCA-based dimensionality reduction
-- 🌳 Decision Tree classification
-- 🧬 LSTM-based deep learning
-- 🚨 Cyber attack detection
-- 🔎 Attack-type classification
-- 📈 Performance comparison
-- 🖥️ Tkinter graphical interface
-- 💾 Saved model support
-- 📊 Result visualization
+▶️ Running the Project
+Run the main application:
+python Main.py
 
-🎓 Project Purpose
-This project was developed as a final-year cybersecurity and machine learning project to explore automated cyber-attack detection in IoT environments.
-The project combines machine learning and deep learning techniques to analyze IoT network data and identify malicious activity.
-It demonstrates practical experience in:
-- Cybersecurity
-- IoT security
-- Machine learning
-- Deep learning
-- Data preprocessing
-- Feature extraction
-- Classification
-- Model evaluation
-- Python development
+Follow the interface to:
+1. Load the dataset.
+2. Preprocess the data.
+3. Perform feature engineering.
+4. Run the machine-learning models.
+5. Run the Autoencoder.
+6. Run the CNN-LSTM model.
+7. Analyze the attack detection results.
+8. Compare model performance.
+📊 Results
+The project compares traditional machine-learning approaches with the proposed hybrid deep-learning architecture.
+The main objective is to demonstrate how combining:
+CNN + LSTM + PCA + Autoencoder
 
-🚀 Future Improvements
-Potential improvements to the project include:
-- Integration with real-time IoT network traffic
-- Real-time attack detection
-- SIEM integration
+can provide a stronger framework for IoT intrusion detection.
+The included screenshots demonstrate the complete workflow from dataset loading to attack detection and model comparison.
+🌐 Applications
+This project can be applied to:
+- IoT Security
+- Network Intrusion Detection
+- SOC Monitoring
+- Cyber Attack Detection
+- Anomaly Detection
+- Network Traffic Analysis
+- Security Analytics
+- Smart Device Security
+🔮 Future Enhancements
+Potential improvements include:
+- Real-time network traffic monitoring
+- Integration with SIEM platforms
+- Live packet capture
 - Automated alert generation
-- Improved handling of imbalanced datasets
-- Additional deep learning architectures
-- Explainable AI for attack classification
-- Web-based monitoring dashboard
-- Real-time visualization of detected attacks
-- Integration with threat intelligence sources
+- Explainable AI for security alerts
+- Real-time SOC dashboard
+- Cloud deployment
+- Continuous model retraining
+- Improved handling of class imbalance
+- Integration with threat-intelligence feeds
+🏆 Academic Project
+Project Title:
+An Improved Hybrid Algorithm for Cyber Attack Detection from IoT Environment
 
-⚠️ Disclaimer
-This project is intended for educational, research, and defensive cybersecurity purposes.
-The datasets and experiments should be used only in controlled and authorized environments. Users are responsible for ensuring that any testing or deployment is performed on systems and networks for which they have appropriate authorization.
-👤 Author
+This project was developed as an academic cybersecurity and machine-learning project focusing on intrusion detection in IoT environments.
+📚 Research
+The work is associated with research on:
+“An Improved Hybrid Algorithm for Cyberattack Detection from IoT Environment”
+
+The project explores the use of hybrid machine-learning and deep-learning techniques for improving cyberattack detection in IoT environments.
+👨‍💻 Author
 Pranay Kumar
-Cybersecurity | SOC Analyst | Security Operations
-GitHub: Mudimanchi-Pranay
+Cybersecurity Graduate | SOC Analyst | Cybersecurity Analyst
+Areas of Interest
+- SOC Operations
+- SIEM
+- Incident Response
+- Threat Detection
+- Threat Hunting
+- Network Security
+- Digital Security
+- Machine Learning for Cybersecurity
+🔗 Connect With Me
+GitHub
+https://github.com/Mudimanchi-Pranay
+LinkedIn
+https://www.linkedin.com/in/pranay4638/
+⭐ If you find this project useful
+Consider giving the repository a ⭐ on GitHub.
