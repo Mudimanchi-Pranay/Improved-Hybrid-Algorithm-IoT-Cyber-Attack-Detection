@@ -199,39 +199,39 @@ Available operations include:
 - Comparison Table
 
 ---
-## 📸 Project Screenshots
+## 📸 Screenshots
 
 ### 🖥️ Project Interface
 
-![Project Interface](screenshots/01-project-interface.png)
+![Project Interface](./screenshots/01-project-interface.png)
 
 ### 📂 Dataset Loaded
 
-![Dataset Loaded](screenshots/02-dataset-loaded.png)
+![Dataset Loaded](./screenshots/02-dataset-loaded.png)
 
 ### ⚙️ Dataset Preprocessing
 
-![Dataset Preprocessing](screenshots/03-dataset-preprocessing.png)
+![Dataset Preprocessing](./screenshots/03-dataset-preprocessing.png)
 
 ### 🧠 Autoencoder Results
 
-![Autoencoder Results](screenshots/04-autoencoder-results.png)
+![Autoencoder Results](./screenshots/04-autoencoder-results.png)
 
-### 🌳 Decision Tree + PCA
+### 🌲 Decision Tree + PCA
 
-![Decision Tree + PCA](screenshots/05-decision-tree-pca-results.png)
+![Decision Tree + PCA](./screenshots/05-decision-tree-pca-results.png)
 
 ### 🔥 CNN-LSTM Results
 
-![CNN-LSTM Results](screenshots/06-cnn-lstm-results.png)
+![CNN-LSTM Results](./screenshots/06-cnn-lstm-results.png)
 
 ### 📊 Model Performance Comparison
 
-![Model Performance Comparison](screenshots/07-model-performance-comparison.png)
+![Model Performance Comparison](./screenshots/07-model-performance-comparison.png)
 
 ### 🚨 Attack Detection
 
-![Attack Detection](screenshots/08-attack-detection.png)
+![Attack Detection](./screenshots/08-attack-detection.png)
 
 
 🔬 Project Execution Screenshots
