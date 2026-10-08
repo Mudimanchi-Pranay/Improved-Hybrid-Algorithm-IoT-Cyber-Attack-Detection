@@ -197,55 +197,30 @@ Available operations include:
 - Comparison Graph
 - Comparison Table
 
----
+📸 Project Screenshots
+🖥️ Project Interface
+<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/01-project-interface.png" alt="Project Interface" width="900">
 
-## 📸 Project Screenshots
+📂 Dataset Loaded
+<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/02-dataset-loaded.png" alt="Dataset Loaded" width="900">
 
-### 🖥️ Project Interface
+⚙️ Dataset Preprocessing
+<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/03-dataset-preprocessing.png" alt="Dataset Preprocessing" width="900">
 
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/01-project-interface.png" alt="Project Interface" width="900"/>
+🧠 Autoencoder Results
+<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/04-autoencoder-results.png" alt="Autoencoder Results" width="900">
 
----
+🌲 Decision Tree + PCA
+<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/05-decision-tree-pca-results.png" alt="Decision Tree PCA Results" width="900">
 
-### 📂 Dataset Loaded
+🔥 CNN-LSTM Results
+<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/06-cnn-lstm-results.png" alt="CNN-LSTM Results" width="900">
 
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/02-dataset-loaded.png" alt="Dataset Loaded" width="900"/>
+📊 Model Performance Comparison
+<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/07-model-performance-comparison.png" alt="Model Performance Comparison" width="900">
 
----
-
-### ⚙️ Dataset Preprocessing
-
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/03-dataset-preprocessing.png" alt="Dataset Preprocessing" width="900"/>
-
----
-
-### 🧠 Autoencoder Results
-
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/04-autoencoder-results.png" alt="Autoencoder Results" width="900"/>
-
----
-
-### 🌲 Decision Tree + PCA
-
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/05-decision-tree-pca-results.png" alt="Decision Tree PCA Results" width="900"/>
-
----
-
-### 🔥 CNN-LSTM Results
-
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/06-cnn-lstm-results.png" alt="CNN-LSTM Results" width="900"/>
-
----
-
-### 📊 Model Performance Comparison
-
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/07-model-performance-comparison.png" alt="Model Performance Comparison" width="900"/>
-
----
-
-### 🚨 Attack Detection
-
-<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/08-attack-detection.png" alt="Attack Detection" width="900"/>
+🚨 Attack Detection
+<img src="https://raw.githubusercontent.com/Mudimanchi-Pranay/Improved-Hybrid-Algorithm-IoT-Cyber-Attack-Detection/main/screenshots/08-attack-detection.png" alt="Attack Detection" width="900">
 
 🔬 Project Execution Screenshots
 1. Project Interface
