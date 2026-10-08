@@ -4,7 +4,6 @@ An improved hybrid machine learning and deep learning approach for detecting and
 
 The project provides a desktop-based application for loading IoT network datasets, preprocessing data, extracting important features, training detection models, identifying attack types, and comparing model performance.
 
----
 
 ## 📌 Project Overview
 
